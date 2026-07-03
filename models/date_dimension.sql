@@ -8,7 +8,7 @@ with cte as
     
     {{get_season('started_at')}} as station_of_year
 
-    from {{ source('demo', 'bike') }}
+    from {{ ref('stg_bike') }}
     where started_at != 'started_at'
 )
 
